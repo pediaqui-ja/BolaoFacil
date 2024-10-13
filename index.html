@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚽🍀 Bolão - Palpites 🍀⚽</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container animated">
+        <h1>⚽ Bolão ⚽ - 🍀 Palpites 🍀</h1>
+        <p>Participe do nosso bolão e tenha a chance de ganhar prêmios incríveis!</p>
+        <p>"O que você acha que vai acontecer? Deixe seu palpite e participe da diversão! 🍀🎉"</p>
+        <p>VALOR DO BILHETE 10 REAIS</p>
+        
+        <form id="betForm">
+            <div class="form-group">
+                <label for="name">Nome:</label>🗣️
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>📧
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone:</label>📱
+                <input type="text" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="teamA">Time A:</label>⚽
+                <select id="teamA" required>
+                    <option value="">Selecione um time</option>
+                    <option value="Time A">Vasco</option>
+                    <option value="Time B">Vasco</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="teamB">Time B:</label>⚽
+                <select id="teamB" required>
+                    <option value="">Selecione um time</option>
+                    <option value="Time A">Sao Paulo</option>
+                    <option value="Time B">Sao Paulo</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="finalScore">Palpite (placar exato):</label>⚽
+                <input type="text" id="finalScore" required placeholder="Ex: 2x1">
+            </div>
+            <div class="form-group">
+                <label for="winner">Quem vai ganhar ou empatar:</label>⚽
+                <input type="text" id="winner" required placeholder="Ex: Time A ou Empate">
+            </div>
+            <div class="form-group">
+                <label for="firstGoal">Qual time faz o primeiro gol:</label>⚽
+                <input type="text" id="firstGoal" required placeholder="Ex: Time A">
+            </div>
+            <div class="form-group">
+                <label for="yellowCards">Quantos cartões amarelos na partida:</label>🟡
+                <input type="number" id="yellowCards" required>
+            </div>
+            <div class="form-group">
+                <label for="redCards">Quantos cartões vermelhos na partida:</label>🟥
+                <input type="number" id="redCards" required>
+            </div>
+            <div class="form-group">
+                <label for="paymentMethod">Forma de Pagamento:</label>💵
+                <select id="paymentMethod" required>
+                    <option value="Pix">Pix</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </select>
+            </div>
+            <button type="button" id="submitBet">🍀 Finalizar Palpite 🍀</button>
+<button type="button" id="submitPurchase">💰 Finalizar Compra 💰</button>
+        </form>
+
+        <div class="qr-code" id="qrCodeContainer" style="display:none;">
+            <h2>QR Code e Chave Pix</h2>
+            <img id="qrCode" src="qrcode.jpg" alt="QR Code" width="200">
+            <p><strong>Chave Pix:</strong>142.101.867-59</p>
+        </div>
+
+        <div class="explanation animated">
+            <h2>Como Funciona?</h2>
+            <p>Os participantes fazem palpites sobre os resultados das partidas. A cada acerto, pontos são acumulados. Os três melhores participantes ganham prêmios! 🎉</p>
+            <p>Placar extato 25 pontos</p>
+            <p>Vitoria ou empate 15 pontos</p>
+            <p>Primeiro gol 10 pontos </p>
+            <p>Cartoes Amarelo 5 pontos</p>
+            <p>Cartoes vermelho 5 pontos</p>
+            <p>👉 A premiação varia conforme a quantidade de participantes.</p>
+            <h3>Quem já comprou:</h3>
+            <ul id="participantsList"></ul>
+            <div class="message" id="messageContainer"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

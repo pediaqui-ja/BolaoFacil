@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1, h2 {
+    text-align: center;
+}
+.form-group {
+    margin-bottom: 1em;
+}
+button {
+    padding: 0.5em;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin: 10px 0;
+}
+button:hover {
+    background: #218838;
+}
+.animated {
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.qr-code {
+    text-align: center;
+    display: none;
+}
+.explanation {
+    margin-top: 20px;
+}
+.message {
+    font-style: italic;
+    color: #555;
+    margin-top: 10px;
+}
+#participantsList {
+    list-style-type: none;
+    padding: 0;
+}
+#participantsList li {
+    margin: 5px 0;
+}
